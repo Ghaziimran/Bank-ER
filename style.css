@@ -1,0 +1,590 @@
+/*SECTION ------------------------------------------------------------------------------------------------------*/
+
+/* PART -- START */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #444;
+  /* background-image: linear-gradient(
+    134deg,
+    rgb(88, 14, 235) 28%,
+    rgb(44, 140, 201) 102%,
+    rgb(65, 77, 217) 60%
+  ); */
+  height: 100vh;
+  padding: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+/*SECTION ------------------------------------------------------------------------------------------------------*/
+
+/* PART -- MAIN */
+
+.welcome {
+  font-size: 1.9rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  color: #ff5757;
+}
+
+.app {
+  position: relative;
+  z-index: 1;
+  max-width: -webkit-fill-available;
+  max-height: fit-content;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 4fr 3fr 3fr;
+  grid-template-rows: auto repeat(3, 15rem) auto;
+  gap: 2rem;
+  transition: all 1s;
+  background-color: #d5f0f0;
+  border-radius: 1rem;
+  padding: 4rem;
+  margin-top: 5rem;
+
+  /* OPACITY for login*/
+  opacity: 0;
+}
+
+.operation--transfer,
+.operation--loan,
+.operation--close {
+  grid-column: 2;
+}
+
+.logo {
+  height: 53rem;
+  position: absolute;
+  margin-left: 18cm;
+  margin-top: 2cm;
+}
+
+.PB-img {
+  height: 2cm;
+  position: absolute;
+  z-index: -1;
+  margin-top: -36px;
+}
+
+/*SECTION ------------------------------------------------------------------------------------------------------*/
+
+/* PART -- LOGGING IN */
+
+.login {
+  display: flex;
+}
+
+.login__input {
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  text-align: center;
+  width: 12rem;
+  border-radius: 10rem;
+  margin-right: 1rem;
+  color: inherit;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+
+.login__input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.login__input::placeholder {
+  color: #bbb;
+}
+
+.login__btn {
+  border: none;
+  background: none;
+  font-size: 2.2rem;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #ff5757;
+}
+
+.login__btn:hover,
+.login__btn:focus,
+.btn--sort:hover,
+.btn--sort:focus {
+  outline: none;
+  color: #777;
+}
+
+/*SECTION ------------------------------------------------------------------------------------------------------*/
+
+/* PART -- ACCOUNT LIST*/
+
+.account-list {
+  position: relative;
+  grid-column: 3;
+  grid-row: 2;
+  height: fit-content;
+  width: -webkit-fill-available;
+  text-align: center;
+  background-color: #00a3a3;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-right: -20px;
+}
+
+.account-list-1 {
+  background-color: lightblue;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.account-list-2 {
+  position: relative;
+  grid-row: 3;
+  margin-top: 1rem;
+  background-color: lightblue;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.account-list-3 {
+  position: relative;
+  grid-row: 3;
+  margin-top: 1rem;
+  background-color: lightblue;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.account-list-4 {
+  position: relative;
+  grid-row: 3;
+  margin-top: 1rem;
+  background-color: lightblue;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.account-list-1:hover,
+.account-list-2:hover,
+.account-list-3:hover,
+.account-list-4:hover {
+  background-color: #66c873;
+}
+
+/*ACCOUNT 1 PART */
+.account-list-1 h3 {
+  transition: color 0.3s;
+}
+
+.account-list-1 h3::before {
+  content: "John Smith";
+}
+
+.account-list-1:hover h3::before {
+  content: "Nickname: JS   PIN: 2222";
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/*ACCOUNT 2 PART*/
+.account-list-2 h3 {
+  transition: color 0.3s;
+}
+
+.account-list-2 h3::before {
+  content: "Steven Thomas Williams";
+}
+
+.account-list-2:hover h3::before {
+  content: "Nickname: STW   PIN: 3333";
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/*ACCOUNT 3 PART*/
+.account-list-3 h3 {
+  transition: color 0.3s;
+}
+
+.account-list-3 h3::before {
+  content: "Sarah Frank";
+}
+
+.account-list-3:hover h3::before {
+  content: "Nickname: SF   PIN: 4444";
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/*ACCOUNT 4 PART*/
+.account-list-4 h3 {
+  transition: color 0.3s;
+}
+
+.account-list-4 h3::before {
+  content: "Ghazi Imran";
+}
+
+.account-list-4:hover h3::before {
+  content: "Nickname: GI   PIN: 1111";
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/*SECTION ------------------------------------------------------------------------------------------------------*/
+
+/* PART -- BALANCE*/
+
+.balance {
+  grid-column: 1 / span 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.balance__label {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: -0.2rem;
+}
+
+.balance__date {
+  font-size: 1.4rem;
+  color: #888;
+}
+
+.balance__value {
+  font-size: 4.5rem;
+  font-weight: 400;
+}
+
+/*SECTION ------------------------------------------------------------------------------------------------------*/
+
+/* PART -- MOVEMENTS*/
+
+.movements {
+  grid-row: 2 / span 3;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: scroll;
+  position: relative;
+  z-index: 1;
+}
+
+.movements__row {
+  padding: 2.25rem 4rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.movements__type {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+  padding: 0.1rem 1rem;
+  border-radius: 10rem;
+  margin-right: 2rem;
+}
+
+.movements__date {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #666;
+}
+
+.movements__type--deposit {
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.movements__type--withdrawal {
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+.movements__value {
+  font-size: 1.7rem;
+  margin-left: auto;
+}
+
+/*SECTION ------------------------------------------------------------------------------------------------------*/
+
+/* PART -- SUMMARY*/
+
+.summary {
+  grid-row: 5 / 6;
+  display: flex;
+  align-items: baseline;
+  padding: 0 0.3rem;
+  margin-top: 1rem;
+}
+
+.summary__label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 0.8rem;
+}
+
+.summary__value {
+  font-size: 2.2rem;
+  margin-right: 2.5rem;
+}
+
+.summary__value--in,
+.summary__value--interest {
+  color: #66c873;
+}
+
+.summary__value--out {
+  color: #f5465d;
+}
+
+/* PART -- SORT BUTTON*/
+
+.btn--sort {
+  margin-left: auto;
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/*SECTION ------------------------------------------------------------------------------------------------------*/
+
+/* PART -- OPERATIONS --- TRANSFER --- LOAN --- CLOSE*/
+
+.operation {
+  border-radius: 1rem;
+  padding: 3rem 4rem;
+  color: #333;
+}
+
+.operation--transfer {
+  background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+.operation--pin-confirmation {
+  display: none;
+  text-align: center; /* Center-align the PIN confirmation form */
+}
+
+.operation--transfer h2 {
+  display: block; /* Show the "Transfer money" heading */
+}
+
+.operation--loan {
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.operation--close {
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+/*SECTION ------------------------------------------------------------------------------------------------------*/
+
+/* PART -- FORM INPUT*/
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 2.5fr 2.5fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.4rem 1rem;
+}
+
+.form__input {
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  padding: 0.3rem 1rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s;
+}
+
+.form__input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.form__label {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.form__btn {
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.8rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form__btn:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/*SECTION ------------------------------------------------------------------------------------------------------*/
+
+/* PART -- PIN CONFIRMATION*/
+
+.operation--pin-confirmation h2 {
+  margin-bottom: 20px; /* Adjust the margin as needed */
+  text-align: left;
+}
+
+.operation--pin-confirmation {
+  display: flexbox;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 2 2;
+  gap: 0.4rem 1rem;
+  border-radius: 0.7rem;
+  padding: 0.3rem 1rem;
+  /* background-color: rgba(255, 255, 255, 0.4); */
+  color: #333;
+  font-size: 1.5rem;
+  font-family: inherit;
+  text-align: center;
+}
+
+.form__PinConfirmation {
+  width: 100%;
+  border: none;
+  /* background-color: rgba(255, 255, 255, 0.4); */
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  padding: 0.3rem 1rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s;
+}
+
+.form__PinConfirmation:focus {
+  outline: none;
+  /* background-color: rgba(255, 255, 255, 0.6); */
+}
+
+.form__btn--transfer-PinConfirmation {
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.8rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form__btn--transfer-PinConfirmation:focus {
+  outline: none;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+}
+
+/*SECTION ------------------------------------------------------------------------------------------------------*/
+
+/* PART -- /*LOGGING  OUT BUTTON*/
+
+.logout-div {
+  position: relative;
+  grid-column: 3;
+  grid-row: 4;
+  height: fit-content;
+  width: -webkit-fill-available;
+  text-align: center;
+  background-color: #00a3a3;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-right: -20px;
+  margin-top: 20px;
+}
+
+.logout-div h2 {
+  margin-left: -20px;
+}
+
+.logout__input {
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  text-align: center;
+  width: 12rem;
+  border-radius: 10rem;
+  margin-right: 2rem;
+  color: inherit;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+  margin-left: 10px;
+}
+
+.logout__input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.logout__input::placeholder {
+  color: #bbb;
+}
+
+.logout__btn {
+  border: none;
+  background: none;
+  font-size: 2.2rem;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/*SECTION ------------------------------------------------------------------------------------------------------*/
+
+/* PART -- /*LOGGING  OUT TIMER*/
+
+.logout-timer {
+  padding: 2.3rem;
+  grid-column: 2 / span 3;
+  font-size: 1.25rem;
+  background-color: #00a3a3;
+  border-radius: 1rem;
+  text-align: center;
+  width: -webkit-fill-available;
+}
+
+.timer {
+  font-weight: 600;
+}
