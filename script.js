@@ -333,7 +333,7 @@ btnLogin.addEventListener("click", function (e) {
   }
 });
 
-//SECTION ------------------------------------------------------------------------------------------
+//SECTION --------------------------------------------------------------------------------------------
 //TRANSFER
 
 btnTransfer.addEventListener("click", function (e) {
