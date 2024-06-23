@@ -223,7 +223,7 @@ const calcDisplayBalance = function (acc) {
   labelBalance.textContent = `£${acc.balance.toFixed(2)}💷`;
 };
 
-//PART -- DISPLAY -- SUMMARY
+//PART -- DISPLAY -- SUMMARY --
 const calcDisplaySummary = function (acc) {
   const incomes = acc.movements
     .filter((mov) => mov > 0)
@@ -242,7 +242,7 @@ const calcDisplaySummary = function (acc) {
   labelSumInterest.textContent = `£${interest.toFixed(2)}`;
 };
 
-//PART -- USERNAMES
+//PART -- USERNAMES --
 const createUsernames = function (accounts) {
   accounts.forEach(function (acc) {
     acc.username = acc.owner
