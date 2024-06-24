@@ -242,7 +242,7 @@ const calcDisplaySummary = function (acc) {
   labelSumInterest.textContent = `£${interest.toFixed(2)}`;
 };
 
-//PART -- USERNAMES --
+//PART -- USERNAMES
 const createUsernames = function (accounts) {
   accounts.forEach(function (acc) {
     acc.username = acc.owner
