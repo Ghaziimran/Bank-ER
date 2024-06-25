@@ -216,7 +216,7 @@ const displayMovements = function (acc, sort = false) {
 //SECTION ------------------------------------------------------------------------------------------
 //CALC DISPLAY
 
-//PART -- DISPLAY -- BALANCE
+//PART -- DISPLAY -- BALANCE ---
 const calcDisplayBalance = function (acc) {
   acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
 
